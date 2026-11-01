@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CampusCart — Your Campus Marketplace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="landing" data-page="landing">
+
+    <a class="skip-link" href="#loginForm">Skip to login</a>
+
+    <!-- Navigation -->
+
+    <header class="top landing-nav">
+        <a class="brand" href="index.html">CampusCart<span>.</span></a>
+
+        <span class="nav-tag">
+            <span class="online-dot"></span>
+            YOUR CAMPUS MARKETPLACE
+        </span>
+    </header>
+
+
+    <main class="hero landing-hero">
+
+        <!-- Left hero content -->
+
+        <section class="hero-copy reveal">
+
+            <span class="eyebrow">BUY · SELL · RENT · SWAP</span>
+
+            <h1>
+                What you no longer need,
+                <span>someone on campus does.</span>
+            </h1>
+
+            <p class="hero-description">
+                A marketplace exclusively for students of your university.
+                Find affordable essentials, sell what you don't need,
+                and connect with people you can actually meet.
+            </p>
+
+
+            <!-- Marketplace categories -->
+
+            <ul class="modes" aria-label="What you can do">
+                <li>Buy</li>
+                <li>Sell</li>
+                <li>Rent</li>
+                <li>Swap</li>
+                <li>Free stuff</li>
+            </ul>
+
+
+            <!-- Recently listed items -->
+
+            <div class="justlisted">
+
+                <div class="justlisted-heading">
+                    <div>
+                        <span class="eyebrow">FRESH FINDS</span>
+                        <h2>Just listed on campus</h2>
+                    </div>
+
+                    <span class="live-label">
+                        <span class="online-dot"></span>
+                        LIVE
+                    </span>
+                </div>
+
+                <ul id="justListed"></ul>
+
+            </div>
+
+
+            <!-- Trust message -->
+
+            <div class="landing-trust">
+                <span class="trust-icon">✓</span>
+                <span>Made for students. Built around your campus.</span>
+            </div>
+
+        </section>
+
+
+        <!-- Right login/signup section -->
+
+        <section class="auth card reveal"
+                 aria-label="Log in or create an account">
+
+            <div class="auth-heading">
+                
+
+                <span class="eyebrow">WELCOME TO CAMPUSCART</span>
+
+                <h2>Your campus. Your community.</h2>
+
+                <p>Sign in or create an account to get started.</p>
+            </div>
+
+
+            <!-- Tabs -->
+
+            <div class="tabs" role="tablist" aria-label="Account options">
+
+                <button type="button"
+                        role="tab"
+                        data-tab="login"
+                        aria-selected="true">
+                    Log in
+                </button>
+
+                <button type="button"
+                        role="tab"
+                        data-tab="signup"
+                        aria-selected="false">
+                    Create account
+                </button>
+
+            </div>
+
+
+            <!-- Login form -->
+
+            <form id="loginForm" novalidate>
+
+                <h2>Welcome back 👋</h2>
+
+                <p class="form-description">
+                    Pick up where you left off.
+                </p>
+
+
+                <div class="field">
+                    <label for="lEmail">University email</label>
+
+                    <input id="lEmail"
+                           type="email"
+                           autocomplete="email"
+                           required
+                           placeholder="you@college.edu.in">
+                </div>
+
+
+                <div class="field">
+                    <label for="lPass">Password</label>
+
+                    <input id="lPass"
+                           type="password"
+                           autocomplete="current-password"
+                           required
+                           placeholder="Enter your password">
+                </div>
+
+
+                <p class="error" id="lErr" role="alert"></p>
+
+                <button class="btn hi block" type="submit">
+                    Log in <span aria-hidden="true">→</span>
+                </button>
+
+                <p class="form-footnote">
+                    New to CampusCart?
+                    <button type="button" data-tab="signup" class="text-tab">
+                        Create an account
+                    </button>
+                </p>
+
+            </form>
+
+
+            <!-- Signup form -->
+
+            <form id="signupForm" novalidate hidden>
+
+                <h2>Join your campus ✨</h2>
+
+                <p class="form-description">
+                    Create your student marketplace account.
+                </p>
+
+
+                <div class="field">
+                    <label for="sName">Full name</label>
+
+                    <input id="sName"
+                           autocomplete="name"
+                           required
+                           placeholder="Your full name">
+                </div>
+
+
+                <div class="field">
+                    <label for="sEmail">University email</label>
+
+                    <input id="sEmail"
+                           type="email"
+                           autocomplete="email"
+                           required
+                           placeholder="you@college.edu.in">
+
+                    <div class="hint">
+                        Only .edu, .ac.in and .edu.in addresses work.
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label for="sPass">Password</label>
+
+                    <input id="sPass"
+                           type="password"
+                           autocomplete="new-password"
+                           required
+                           minlength="6"
+                           placeholder="At least 6 characters">
+                </div>
+
+
+                <div class="field">
+                    <label for="sPass2">Confirm password</label>
+
+                    <input id="sPass2"
+                           type="password"
+                           autocomplete="new-password"
+                           required
+                           placeholder="Enter your password again">
+                </div>
+
+
+                <p class="error" id="sErr" role="alert"></p>
+
+                <button class="btn hi block" type="submit">
+                    Create account <span aria-hidden="true">→</span>
+                </button>
+
+                <p class="form-footnote">
+                    Already have an account?
+                    <button type="button" data-tab="login" class="text-tab">
+                        Log in
+                    </button>
+                </p>
+
+            </form>
+
+
+            <div class="auth-bottom">
+                <span>🔒</span>
+                University email verification keeps the community student-focused.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="landing-footer">
+        <a class="brand" href="index.html">CampusCart<span>.</span></a>
+        <span>A little marketplace for a big campus life.</span>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
