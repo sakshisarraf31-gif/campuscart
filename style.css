@@ -2452,3 +2452,9 @@ html.js .reveal.visible {
         transition: none;
     }
 }
+/* Force all hidden layout animations to show up instantly */
+.reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
