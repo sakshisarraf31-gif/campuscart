@@ -148,7 +148,7 @@ function initLanding() {
       location.href = 'home.html';
     });
   }
-  
+
   if (forms.signup) {
     forms.signup.addEventListener('submit', (ev) => {
       ev.preventDefault();
@@ -159,7 +159,7 @@ function initLanding() {
   }
 }
 
-// Global router initialization based on layout attributes
+/* ---------- global router initialization ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   const pageType = document.body.getAttribute('data-page');
   if (pageType === 'landing') {
